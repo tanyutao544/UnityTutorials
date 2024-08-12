@@ -56,3 +56,13 @@ Macros help reduce the number of repeated code when defining kernel functions.
 \*Spacing when defining these code chunks need to be carefully checked e.g.
 `KERNEL_FUNCTION(function)` and `KERNEL_FUNCTION (function)`
 have the difference of a compile error in the latter and a successful compile.
+
+### Basics6:
+
+Fractals, creating objects with self similarity. Good case study on how to optimize or avoid recursive work.
+Creation of the Sierpiński triangle, faces performance issues at depths higher than 6 without any optimizations. Further complicated when animating the objects.
+Unity struggles with recursive hierachy. Hence solution would be to remove the recursive nature.
+By using a flat hierachy, we are able to use procedural rendering on parts of the same level, reducing the overhead of thousands of game objects
+
+Further optimization can be accomplished in unity using its job system. Similar systems can be found/manually programmed in other engines to handle parallel computations. The system takes advantage of the CPU's multiple cores and special SIMD(single-instruction-multiple-data) instructions. Examples of SIMD are vectorization, where individual instructions on an array index can be ran parallel on multiple indexes by replacing it with instructions on vectors.
+E.g.:`data[i] = 2f * data[i]` vectorized, the array is treated as a single vector and multiplied.
