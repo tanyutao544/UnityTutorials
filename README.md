@@ -66,3 +66,11 @@ By using a flat hierachy, we are able to use procedural rendering on parts of th
 
 Further optimization can be accomplished in unity using its job system. Similar systems can be found/manually programmed in other engines to handle parallel computations. The system takes advantage of the CPU's multiple cores and special SIMD(single-instruction-multiple-data) instructions. Examples of SIMD are vectorization, where individual instructions on an array index can be ran parallel on multiple indexes by replacing it with instructions on vectors.
 E.g.:`data[i] = 2f * data[i]` vectorized, the array is treated as a single vector and multiplied.
+
+### Basics7:
+
+Interpolating between Colors, achieved in unity `Color.lerp(<firstCol>, <secondCol>, <t>)` where t clamps between 0 and 1, `@t = 0` color is `firstCol`, `@t = 1` color is `secondCol`. To get configurable gradients, use a serializeField of type `Gradient` and set materialPropertyBlock color with `gradient.Evaluate(t)` where t is the same function as above.
+
+Using the instance identifiers and applying it to a function, in this tutorial, modulo 5. Results in a pseudo random scatter of colors in the fractal parts. This however falls prey to tiling at higher depth levels and columns of repeated color at the lower depth values.
+
+To get rid of this, add different offset per level to the sequence or even use different sequence per level.
