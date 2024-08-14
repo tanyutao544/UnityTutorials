@@ -74,3 +74,24 @@ Interpolating between Colors, achieved in unity `Color.lerp(<firstCol>, <secondC
 Using the instance identifiers and applying it to a function, in this tutorial, modulo 5. Results in a pseudo random scatter of colors in the fractal parts. This however falls prey to tiling at higher depth levels and columns of repeated color at the lower depth values.
 
 To get rid of this, add different offset per level to the sequence or even use different sequence per level.
+<<<<<<< Updated upstream
+=======
+
+### Mesh1:
+
+Meshes consists of triangles and vertices. Which side a triangle is visible from is determined by the orientation of its vertex indices. By default, if they are arranged in a `clockwise `direction the triangle is considered to be forward-facing and visible. `Counter-clockwise `triangles are discarded.
+
+UV coordinates are [0-1] how the texture/albedo map behaves on a mesh depends on its settings. clamping or wrapping, its tiling setting and whether the uv coordinates have been set up correctly.
+
+Normal maps are textures with normal vector values encoded as colors. Normal maps help create fake details on surfaces. This helps in performance, where instead of a high geometry object, such as fully rendered dirt, we can apply a normal map to simulate the bumps on a flat mesh plane. Tangent vectors are also required when using normal maps to properly orient the generated bumps from the normal map.
+
+### Mesh2:
+
+Creating 3 objects, such as cubes. Care must be taken when setting triangles for the mesh. Often multiple methods are required, the way the vertices are created and indexed also play a part in how the creation of the meshes is carried out.
+
+Manipulating the normals of the object, can also change its shape. Often more complex geometry can be represented by mathematical formulas.
+In the case of a rounded cube as described in the tutorial:
+`For any point on the outer cube there's a point closest to it on the inner cube. We can use this to determine the normal vectors for the rounded cube.`
+
+Meshes, can be split into submeshes to aid in texture application. In the tutorial, the cube is split into three pairs of opposite faces.
+>>>>>>> Stashed changes
