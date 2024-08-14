@@ -74,3 +74,13 @@ Interpolating between Colors, achieved in unity `Color.lerp(<firstCol>, <secondC
 Using the instance identifiers and applying it to a function, in this tutorial, modulo 5. Results in a pseudo random scatter of colors in the fractal parts. This however falls prey to tiling at higher depth levels and columns of repeated color at the lower depth values.
 
 To get rid of this, add different offset per level to the sequence or even use different sequence per level.
+
+### Mesh1:
+
+Meshes consists of triangles and vertices. Which side a triangle is visible from is determined by the orientation of its vertex indices. By default, if they are arranged in a `clockwise `direction the triangle is considered to be forward-facing and visible. `Counter-clockwise `triangles are discarded.
+
+UV coordinates are [0-1] how the texture/albedo map behaves on a mesh depends on its settings. clamping or wrapping, its tiling setting and whether the uv coordinates have been set up correctly.
+
+Normal maps are textures with normal vector values encoded as colors. Normal maps help create fake details on surfaces. This helps in performance, where instead of a high geometry object, such as fully rendered dirt, we can apply a normal map to simulate the bumps on a flat mesh plane. Tangent vectors are also required when using normal maps to properly orient the generated bumps from the normal map.
+
+### Mesh2:
