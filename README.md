@@ -74,8 +74,6 @@ Interpolating between Colors, achieved in unity `Color.lerp(<firstCol>, <secondC
 Using the instance identifiers and applying it to a function, in this tutorial, modulo 5. Results in a pseudo random scatter of colors in the fractal parts. This however falls prey to tiling at higher depth levels and columns of repeated color at the lower depth values.
 
 To get rid of this, add different offset per level to the sequence or even use different sequence per level.
-<<<<<<< Updated upstream
-=======
 
 ### Mesh1:
 
@@ -94,4 +92,9 @@ In the case of a rounded cube as described in the tutorial:
 `For any point on the outer cube there's a point closest to it on the inner cube. We can use this to determine the normal vectors for the rounded cube.`
 
 Meshes, can be split into submeshes to aid in texture application. In the tutorial, the cube is split into three pairs of opposite faces.
->>>>>>> Stashed changes
+
+### Mesh3:
+
+Continue iterating over till a satisfiable result is met. Perfect solutions might not exist and there will be trade offs with each change.
+In this tutorial, converting the rounded cube mesh from Mesh2 to a sphere. The naive approach first introduced is to normalize the vertexes from the square to the center origin and the multiply it by the radius. This has the effect of stretching the center of the meshes as a result of not distributing the vertices equally around the circumfrence of the sphere.
+The second approach,
