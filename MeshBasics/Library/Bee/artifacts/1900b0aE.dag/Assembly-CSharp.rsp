@@ -330,6 +330,8 @@
 "Assets/Scripts/CircleGizmo_Visualization.cs"
 "Assets/Scripts/Cube.cs"
 "Assets/Scripts/CubeSphere.cs"
+"Assets/Scripts/MeshDeformer.cs"
+"Assets/Scripts/MeshDeformerInput.cs"
 "Assets/Scripts/RoundedCube.cs"
 -langversion:9.0
 /deterministic
